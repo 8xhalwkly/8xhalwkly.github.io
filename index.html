@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+
+<html lang="id">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>halwkly — Security Researcher</title>
+<meta content="halwkly" name="application-name"/>
+<meta content="halwkly" name="apple-mobile-web-app-title"/>
+<meta content="#000000" name="theme-color"/>
+<meta content="dark light" name="color-scheme"/>
+<link href="https://halwklys.netlify.app/" rel="canonical"/>
+<link href="/favicon.ico" rel="icon" type="image/x-icon">
+<link href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png"/>
+<link href="/favicon-512x512.png" rel="icon" sizes="512x512" type="image/png"/>
+<link href="/favicon.png" rel="icon" type="image/png"/>
+<link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/site.webmanifest" rel="manifest"/>
+<meta content="website" property="og:type"/>
+<meta content="halwkly" property="og:site_name"/>
+<meta content="halwkly — Security Researcher" property="og:title"/>
+<meta content="Security research, responsible disclosures, and bug bounty work by halwkly." property="og:description"/>
+<meta content="https://halwklys.netlify.app/" property="og:url"/>
+<meta content="https://halwklys.netlify.app/og-preview-v4.png" property="og:image"/>
+<meta content="https://halwklys.netlify.app/og-preview-v4.png" property="og:image:secure_url"/>
+<link href="https://halwklys.netlify.app/og-preview-v4.png" rel="image_src"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="image/png" property="og:image:type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="halwkly — Security Researcher" name="twitter:title"/>
+<meta content="Security research, responsible disclosures, and bug bounty work by halwkly." name="twitter:description"/>
+<meta content="https://halwkly.netlify.app/og-preview-v4.png" name="twitter:image"/>
+<meta content="halwkly.netlify.app" name="twitter:domain"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "name": "halwkly",
+      "url": "https://halwklys.netlify.app/",
+      "image": "https://halwklys.netlify.app/favicon-512x512.png"
+    },
+    {
+      "@type": "Person",
+      "name": "halwkly",
+      "url": "https://halwklys.netlify.app/",
+      "image": "https://halwklys.netlify.app/favicon-512x512.png",
+      "jobTitle": "Security Researcher",
+      "sameAs": [
+        "https://www.linkedin.com/in/abdul-rasyid-a69649364",
+        "https://discord.com/users/1439945024199458859"
+      ]
+    }
+  ]
+}
+</script>
+<meta content="halwkly — student security researcher and bug bounty hunter. Selected private disclosures, research stack, and contact information." name="description"/>
+<meta content="halwkly" name="author"/>
+<meta content="index,follow" name="robots"/>
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#portfolio">Skip to content</a>
+<nav aria-label="Portfolio navigation" class="floating-nav mono" id="floating-nav">
+<span class="floating-nav-brand">halwkly</span>
+<a href="#home">Home</a>
+<a href="#stack">Stack</a>
+<a href="#disclosures">Disclosures</a>
+<a href="#writeups">Research</a>
+<a href="#contact">Contact</a>
+</nav>
+<main class="container" id="portfolio">
+<header id="home">
+<img alt="" aria-hidden="true" class="corner-brand-mark" src="assets/h-flame-mark.png"/>
+<div class="brand">
+<h1 class="mono">halwkly</h1>
+<p class="mono">Student Security Researcher &amp; Bug Bounty Hunter</p>
+<div class="status-line mono"><span class="status-dot"></span> Open to opportunities</div>
+<div class="contact-links" id="contact">
+<a aria-label="Contact me for opportunities on LinkedIn" class="opportunity-link mono" href="https://www.linkedin.com/in/abdul-rasyid-a69649364" rel="noopener noreferrer" target="_blank">
+<svg aria-hidden="true" class="linkedin-mark" viewbox="0 0 24 24"><path d="M20.452 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.356V8.997h3.414v1.561h.047c.476-.9 1.637-1.85 3.37-1.85 3.602 0 4.267 2.371 4.267 5.455v6.289zM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zm1.779 13.019H3.558V8.997h3.558v11.455z"></path></svg>
+<span>Let’s connect</span><span class="button-arrow" aria-hidden="true">↗</span>
+</a>
+<a aria-label="Contact me for collaboration by email" class="opportunity-link mono" href="mailto:halwkly@wearehackerone.com">
+<svg aria-hidden="true" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+<span>Work with me</span><span class="button-arrow" aria-hidden="true">↗</span>
+</a>
+</div>
+</div>
+<div class="header-actions">
+<button aria-label="Discord Profile" class="action-btn" id="discord-btn">
+<svg class="fill-svg" viewbox="0 0 24 24">
+<path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.873-.894.077.077 0 0 1-.008-.128c.126-.093.252-.19.372-.287a.075.075 0 0 1 .077-.011c3.92 1.793 8.18 1.793 12.061 0a.073.073 0 0 1 .078.009c.12.099.246.195.373.289a.077.077 0 0 1-.006.127 12.298 12.298 0 0 1-1.873.894.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03a.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.156-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.156 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.156-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.156 2.418z"></path>
+</svg>
+</button><a aria-label="HackerOne Profile" class="action-btn" href="https://hackerone.com/halwkly" target="_blank"><svg aria-hidden="true" class="fill-svg h1-logo" viewbox="0 0 24 24">
+<path d="M7.207 0c-.4836 0-.8774.1018-1.1823.3002-.3044.2003-.4592.4627-.4592.7798v21.809c0 .2766.1581.5277.4752.7609.315.2335.7031.3501 1.1664.3501.4427 0 .8306-.1166 1.1678-.3501.3352-.231.5058-.4843.5058-.761V1.0815c0-.319-.1623-.5769-.4893-.7813C8.0644.1018 7.6702 0 7.207 0zm9.5234 8.662c-.4836 0-.8717.0981-1.1683.3007l-4.439 2.7822c-.1988.1861-.2841.4687-.2473.855.0342.3826.2108.747.5238 1.0907.3145.346.6662.5626 1.0684.6547.3963.0899.6973.041.8962-.143l1.7551-1.0951v9.7817c0 .2767.1522.5278.4607.761.3007.2335.6873.3501 1.1504.3501.463 0 .863-.1166 1.1983-.3501.3371-.2332.5058-.4843.5058-.761V9.7381c0-.3193-.165-.577-.4898-.7754-.3252-.2026-.7288-.3007-1.2143-.3007z" fill="currentColor"></path>
+</svg></a>
+<a aria-label="Contact Email" class="action-btn" href="mailto:halwkly@wearehackerone.com">
+<svg stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
+<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+<polyline points="22,6 12,13 2,6"></polyline>
+</svg>
+</a>
+<button aria-label="Toggle Theme" class="theme-btn" id="theme-toggle">
+<svg class="sun-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
+<circle cx="12" cy="12" r="5"></circle>
+<line x1="12" x2="12" y1="1" y2="3"></line>
+<line x1="12" x2="12" y1="21" y2="23"></line>
+<line x1="4.22" x2="5.64" y1="4.22" y2="5.64"></line>
+<line x1="18.36" x2="19.78" y1="18.36" y2="19.78"></line>
+<line x1="1" x2="3" y1="12" y2="12"></line>
+<line x1="21" x2="23" y1="12" y2="12"></line>
+<line x1="4.22" x2="5.64" y1="19.78" y2="18.36"></line>
+<line x1="18.36" x2="19.78" y1="4.22" y2="5.64"></line>
+</svg>
+<svg class="moon-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
+<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+</svg>
+</button>
+</div>
+</header>
+<section class="metrics-grid">
+<div class="metric-card">
+<div class="label mono">Start</div>
+<div class="value mono">2025</div>
+</div>
+<div class="metric-card">
+<div class="label mono">Total Valid Bug</div>
+<div class="value mono"><span class="counter-number" data-counter="9">0</span></div>
+</div>
+<div class="metric-card">
+<div class="label mono">Total Payout</div>
+<div class="value mono">$<span class="counter-number" data-counter="2106" data-format="en">0</span></div>
+</div>
+</section>
+<section aria-labelledby="program-strip-title" class="program-strip-section">
+<div class="section-title mono" id="program-strip-title">Security Programs</div>
+<div class="program-strip">
+<a aria-label="Hostinger security program" class="program-strip-item" href="https://hackerone.com/hostinger" rel="noopener noreferrer" target="_blank">
+<img alt="Hostinger" class="program-strip-logo" decoding="async" onerror="this.hidden=true;this.nextElementSibling.hidden=false" referrerpolicy="no-referrer" src="https://cdn.simpleicons.org/hostinger/673DE6"/><span class="program-strip-fallback mono" hidden="">H</span>
+<span class="program-strip-name">Hostinger</span>
+</a>
+<a aria-label="Barantum bug bounty program" class="program-strip-item" href="https://www.barantum.com/id/bug-bounty" rel="noopener noreferrer" target="_blank">
+<img alt="Barantum" class="program-strip-logo" decoding="async" onerror="this.hidden=true;this.nextElementSibling.hidden=false" referrerpolicy="no-referrer" src="https://www.barantum.com/favicon.ico"/><span class="program-strip-fallback mono" hidden="">B</span>
+<span class="program-strip-name">Barantum</span>
+</a>
+<a aria-label="HubSpot security program" class="program-strip-item" href="https://hackerone.com/hubspot" rel="noopener noreferrer" target="_blank">
+<img alt="HubSpot" class="program-strip-logo" decoding="async" onerror="this.hidden=true;this.nextElementSibling.hidden=false" referrerpolicy="no-referrer" src="https://www.hubspot.com/hubfs/Media%20Assets/Blog/Navigation/sprocket.svg"/><span class="program-strip-fallback mono" hidden="">H</span>
+<span class="program-strip-name">HubSpot</span>
+</a>
+<a aria-label="3CX security program" class="program-strip-item" href="https://hackerone.com/3cx" rel="noopener noreferrer" target="_blank">
+<img alt="3CX" class="program-strip-logo" decoding="async" onerror="this.hidden=true;this.nextElementSibling.hidden=false" referrerpolicy="no-referrer" src="https://upload.wikimedia.org/wikipedia/commons/4/4e/3cx_logo.svg"/><span class="program-strip-fallback mono" hidden="">3CX</span>
+<span class="program-strip-name">3CX</span>
+</a>
+<a aria-label="Qdrant security program" class="program-strip-item" href="https://qdrant.tech/security/bug-bounty-program/" rel="noopener noreferrer" target="_blank">
+<img alt="Qdrant" class="program-strip-logo" decoding="async" onerror="this.hidden=true;this.nextElementSibling.hidden=false" referrerpolicy="no-referrer" src="https://qdrant.tech/img/brand-resources-logos/qdrant-brandmark-red.svg"/><span class="program-strip-fallback mono" hidden="">Q</span>
+<span class="program-strip-name">Qdrant</span>
+</a>
+</div>
+</section>
+<section aria-labelledby="research-stack-title" class="stack-section" id="stack">
+<div class="section-title mono" id="research-stack-title">Research Stack</div>
+<div class="stack-grid">
+<div class="stack-card" title="Intercepting proxy &amp; web testing">
+<div class="stack-icon"><img alt="Burp Suite" decoding="async" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" src="https://cdn.simpleicons.org/burpsuite/FF6633"/><span class="mono" style="display:none;font-weight:800;font-size:12px;">B</span></div>
+<div class="stack-info"><div class="stack-name">Burp Suite</div><div class="stack-type mono">Proxy</div></div>
+</div>
+</div>
+</section>
+<section id="disclosures">
+<div class="section-title mono">Responsible Disclosure Activity</div>
+<div class="log-container">
+<div class="log-item">
+<div class="log-left">
+<div class="logo-box brand-hostinger"><img alt="Hostinger logo" class="program-logo" decoding="async" onerror="this.hidden=true;this.nextElementSibling.hidden=false" referrerpolicy="no-referrer" src="https://cdn.simpleicons.org/hostinger/673DE6"/><span class="logo-fallback mono" hidden="">H</span></div>
+<div class="log-info">
+<h3>Hostinger</h3>
+<div class="log-meta">
+<span class="privacy-note mono">PRIVATE DISCLOSURE</span>
+<a class="platform-link mono" href="https://hackerone.com/hostinger" target="_blank">HackerOne Program</a>
+<span class="badge mono">Medium</span>
+</div>
+</div>
+</div>
+<div class="log-right"><div class="bounty-amount mono">$922</div></div>
+</div>
+<div class="log-item">
+<div class="log-left">
+<div class="logo-box brand-hostinger"><img alt="Hostinger logo" class="program-logo" decoding="async" onerror="this.hidden=true;this.nextElementSibling.hidden=false" referrerpolicy="no-referrer" src="https://cdn.simpleicons.org/hostinger/673DE6"/><span class="logo-fallback mono" hidden="">H</span></div>
+<div class="log-info">
+<h3>Hostinger (Collab)</h3>
+<div class="log-meta">
+<span class="privacy-note mono">PRIVATE DISCLOSURE</span>
+<a class="platform-link mono" href="https://hackerone.com/hostinger" target="_blank">HackerOne Program</a>
+<span class="badge mono">Medium (Colab)</span>
+</div>
+</div>
+</div>
+<div class="log-right"><div class="bounty-amount mono">$200</div></div>
+</div>
+<div class="log-item">
+<div class="log-left">
+<div class="logo-box brand-hostinger"><img alt="Hostinger logo" class="program-logo" decoding="async" onerror="this.hidden=true;this.nextElementSibling.hidden=false" referrerpolicy="no-referrer" src="https://cdn.simpleicons.org/hostinger/673DE6"/><span class="logo-fallback mono" hidden="">H</span></div>
+<div class="log-info">
+<h3>Hostinger</h3>
+<div class="log-meta">
+<span class="privacy-note mono">PRIVATE DISCLOSURE</span>
+<a class="platform-link mono" href="https://hackerone.com/hostinger" target="_blank">HackerOne Program</a>
+<span class="badge mono">Medium</span>
+</div>
+</div>
+</div>
+<div class="log-right"><div class="bounty-amount mono">$200</div></div>
+</div>
+<div class="log-item">
+<div class="log-left">
+<div class="logo-box brand-barantum"><img alt="Barantum logo" class="program-logo" decoding="async" onerror="this.hidden=true;this.nextElementSibling.hidden=false" referrerpolicy="no-referrer" src="https://www.barantum.com/favicon.ico"/><span class="logo-fallback mono" hidden="">B</span></div>
+<div class="log-info">
+<h3>Barantum</h3>
+<div class="log-meta">
+<span class="privacy-note mono">PRIVATE DISCLOSURE</span>
+<a class="platform-link mono" href="https://www.barantum.com/id/bug-bounty" rel="noopener noreferrer" target="_blank">Self-hosted Program</a>
+<span class="badge mono">Medium</span>
+</div>
+</div>
+</div>
+<div class="log-right"><div class="bounty-amount mono">$56</div></div>
+</div>
+<div class="log-item">
+<div class="log-left">
+<div class="logo-box brand-barantum"><img alt="Barantum logo" class="program-logo" decoding="async" onerror="this.hidden=true;this.nextElementSibling.hidden=false" referrerpolicy="no-referrer" src="https://www.barantum.com/favicon.ico"/><span class="logo-fallback mono" hidden="">B</span></div>
+<div class="log-info">
+<h3>Barantum</h3>
+<div class="log-meta">
+<span class="privacy-note mono">PRIVATE DISCLOSURE</span>
+<a class="platform-link mono" href="https://www.barantum.com/id/bug-bounty" rel="noopener noreferrer" target="_blank">Self-hosted Program</a>
+<span class="badge mono">Low</span>
+</div>
+</div>
+</div>
+<div class="log-right"><div class="bounty-amount mono">$28</div></div>
+</div>
+<div class="log-item">
+<div class="log-left">
+<div class="logo-box brand-hubspot"><img alt="HubSpot logo" class="program-logo" decoding="async" onerror="this.hidden=true;this.nextElementSibling.hidden=false" referrerpolicy="no-referrer" src="https://www.hubspot.com/hubfs/Media%20Assets/Blog/Navigation/sprocket.svg"/><span class="logo-fallback mono" hidden="">H</span></div>
+<div class="log-info">
+<h3>HubSpot</h3>
+<div class="log-meta">
+<span class="privacy-note mono">PRIVATE DISCLOSURE</span>
+<a class="platform-link mono" href="https://hackerone.com/hubspot" target="_blank">HackerOne Program</a>
+<span class="badge mono">Low</span>
+</div>
+</div>
+</div>
+<div class="log-right"><div class="bounty-amount mono">$50</div></div>
+</div>
+<div class="log-item">
+<div class="log-left">
+<div class="logo-box brand-hubspot"><img alt="HubSpot logo" class="program-logo" decoding="async" onerror="this.hidden=true;this.nextElementSibling.hidden=false" referrerpolicy="no-referrer" src="https://www.hubspot.com/hubfs/Media%20Assets/Blog/Navigation/sprocket.svg"/><span class="logo-fallback mono" hidden="">H</span></div>
+<div class="log-info">
+<h3>HubSpot</h3>
+<div class="log-meta">
+<span class="privacy-note mono">PRIVATE DISCLOSURE</span>
+<a class="platform-link mono" href="https://hackerone.com/hubspot" target="_blank">HackerOne Program</a>
+<span class="badge mono">Low</span>
+</div>
+</div>
+</div>
+<div class="log-right"><div class="bounty-amount mono">$50</div></div>
+</div>
+<div class="log-item">
+<div class="log-left">
+<div class="logo-box brand-3cx"><img alt="3CX logo" class="program-logo" decoding="async" onerror="this.hidden=true;this.nextElementSibling.hidden=false" referrerpolicy="no-referrer" src="https://upload.wikimedia.org/wikipedia/commons/4/4e/3cx_logo.svg"/><span class="logo-fallback mono" hidden="">3CX</span></div>
+<div class="log-info">
+<h3>3CX</h3>
+<div class="log-meta">
+<span class="privacy-note mono">PRIVATE DISCLOSURE</span>
+<a class="platform-link mono" href="https://hackerone.com/3cx" target="_blank">HackerOne Program</a>
+<span class="badge mono">Low</span>
+</div>
+</div>
+</div>
+<div class="log-right"><div class="bounty-amount mono">$100</div></div>
+</div>
+<div class="log-item">
+<div class="log-left">
+<div class="logo-box brand-qdrant"><img alt="Qdrant logo" class="program-logo" decoding="async" onerror="this.hidden=true;this.nextElementSibling.hidden=false" referrerpolicy="no-referrer" src="https://qdrant.tech/img/brand-resources-logos/qdrant-brandmark-red.svg"/><span class="logo-fallback mono" hidden="">Q</span></div>
+<div class="log-info">
+<h3>Qdrant</h3>
+<div class="log-meta">
+<span class="privacy-note mono">PRIVATE DISCLOSURE</span>
+<a class="platform-link mono" href="https://qdrant.tech/security/bug-bounty-program/" target="_blank">Self-hosted Program</a>
+<span class="badge mono">Medium</span>
+</div>
+</div>
+</div>
+<div class="log-right"><div class="bounty-amount mono">$450</div></div>
+</div>
+</div>
+</section>
+<section aria-labelledby="writeups-title" id="writeups">
+<div class="section-title mono" id="writeups-title">Research Notes</div>
+<div class="wu-container wu-container-single"><a class="wu-card modal-trigger" data-id="indirect-prompt-injection-filter" data-title="Indirect Prompt Injection Leads to Automatic Inbox Email Removal" href="#">
+<div><figure class="wu-card-media"><img alt="Illustrative cover image for the indirect prompt injection write-up" decoding="async" loading="lazy" src="/assets/writeup/04-indirect-cover.png"/></figure>
+<div class="wu-meta mono">
+<span class="badge mono" style="border-color: var(--text-primary);">WRITE-UP</span>
+<span>5 min read</span>
+</div>
+<h3 class="wu-title">Indirect Prompt Injection Leads to Automatic Inbox Email Removal</h3>
+<p class="wu-excerpt">A crafted story-style email manipulated an AI mail assistant into creating a malicious rule that automatically removed incoming inbox messages. Reported in collaboration with rdzsp.</p>
+</div>
+<div class="wu-footer">
+<div class="wu-tags mono">
+<span class="wu-tag">Indirect Prompt Injection</span>
+<span class="wu-tag">Mail Rules</span>
+<span class="wu-tag">Collab</span>
+</div>
+<svg class="wu-icon" height="18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18">
+<line x1="5" x2="19" y1="12" y2="12"></line>
+<polyline points="12 5 19 12 12 19"></polyline>
+</svg>
+</div>
+</a></div>
+</section>
+<footer class="site-footer mono">
+<span>halwkly · security research portfolio</span>
+<a href="mailto:halwkly@wearehackerone.com">halwkly@wearehackerone.com</a>
+</footer>
+</main>
+<div class="toast mono" id="toast-alert"></div>
+<div aria-hidden="true" class="modal-overlay" inert id="wu-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+<div class="modal-content">
+<div class="modal-header">
+<h2 class="mono" id="modal-title"></h2>
+<button aria-label="Close Modal" class="close-modal-btn" id="close-modal">
+<svg height="24" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24">
+<line x1="18" x2="6" y1="6" y2="18"></line>
+<line x1="6" x2="18" y1="6" y2="18"></line>
+</svg>
+</button>
+</div>
+<div class="modal-body" id="modal-body-content"></div>
+</div>
+</div>
+<script>
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const body = document.body;
+        const themeColorMeta = document.querySelector('meta[name="theme-color"]');
+        const discordBtn = document.getElementById('discord-btn');
+        const toast = document.getElementById('toast-alert');
+
+        const savedTheme = localStorage.getItem('portfolio-theme');
+        if (savedTheme === 'light') body.classList.add('light-theme');
+        themeToggleBtn.setAttribute('aria-pressed', String(body.classList.contains('light-theme')));
+        if (themeColorMeta) themeColorMeta.setAttribute('content', body.classList.contains('light-theme') ? '#f7f7f5' : '#070707');
+
+        themeToggleBtn.addEventListener('click', () => {
+            body.classList.toggle('light-theme');
+            const isLight = body.classList.contains('light-theme');
+            localStorage.setItem('portfolio-theme', isLight ? 'light' : 'dark');
+            themeToggleBtn.setAttribute('aria-pressed', String(isLight));
+            if (themeColorMeta) themeColorMeta.setAttribute('content', isLight ? '#f7f7f5' : '#070707');
+        });
+
+        discordBtn.addEventListener('click', () => {
+            const discordUserId = '1439945024199458859';
+            const discordProfileUrl = `https://discord.com/users/${discordUserId}`;
+
+            toast.textContent = 'Opening Discord Profile…';
+            toast.classList.add('show');
+
+            const discordWindow = window.open(discordProfileUrl, '_blank', 'noopener,noreferrer');
+            if (!discordWindow) {
+                window.location.href = discordProfileUrl;
+            }
+
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 1600);
+        });
+
+        const wuArticles = {
+        'indirect-prompt-injection-filter': `
+<div class="wu-article">
+  <figure class="wu-hero-cover reveal-section">
+    <img src="/assets/writeup/04-indirect-cover.png" alt="Illustrative cover for the indirect prompt injection write-up" loading="lazy">
+    <figcaption>Illustrative cover art for the write-up. This visual is used as a title image for the disclosure page.</figcaption>
+  </figure>
+  <section class="wu-section-block wu-summary-box reveal-section">
+    <h4>Summary</h4>
+    <p>I identified an indirect prompt injection issue in an AI-assisted email workflow. A crafted story-style email embedded hidden instructions in the body, and once a victim asked the assistant to summarize the email, the assistant followed the embedded instructions and created an email rule. The resulting rule silently removed incoming inbox messages by applying an attacker-influenced mail rule.</p>
+    <div class="collab-card reveal-section">
+      <div class="collab-kicker mono">COLLABORATION</div>
+      <a class="collab-person" href="https://hackerone.com/rdzsp" target="_blank" rel="noopener noreferrer" aria-label="Open rdzsp on HackerOne">
+        <img src="/assets/collab/rdzsp.png" alt="rdzsp profile image" class="collab-avatar" loading="lazy">
+        <span class="collab-name mono">rdzsp</span>
+        <span class="collab-profile mono">HackerOne profile ↗</span>
+      </a>
+      <p class="collab-role">Collaboration on the research. My contribution focused on escalation, impact validation, and turning the initial behavior into a stronger security finding.</p>
+    </div>
+  </section>
+  <section class="wu-section-block reveal-section">
+    <h4>Sanitized attacker-controlled content</h4>
+    <p class="wu-callout">For safety, the exact hidden instruction sequence is not reproduced here. The public write-up uses a sanitized example instead of the original malicious directive.</p>
+    <div class="wu-sanitized mono">Story excerpt: A narrative-style email describes a fictional story to make the message look benign.
+
+[redacted hidden instruction block]
+# Notes: embedded instructions caused the assistant to create a folder named FABEL and add a filter that treats messages containing “halo” as fake stories, moving them to Trash before returning a summary.
+
+The victim only asked the assistant to summarize the email, but the assistant also executed the hidden instructions.</div>
+  </section>
+  <section class="wu-section-block reveal-section">
+    <h4>Why the attack changed from deletion to filtering</h4>
+    <p>An attempt to push the assistant toward destructive mailbox actions was not successful because deletion was protected by a human-in-the-loop (HITL) requirement. That safeguard forced a human approval step. I therefore explored a different path and found that rule creation was not equally protected, making filter manipulation the practical impact path.</p>
+    <div class="wu-inline-grid">
+      <figure class="wu-evidence">
+        <img src="/assets/writeup/05-hitl.png" alt="Human in the loop process illustration" loading="lazy">
+        <figcaption>HITL explains why a direct deletion attempt required explicit human approval and did not complete automatically.</figcaption>
+      </figure>
+    </div>
+  </section>
+  <section class="wu-section-block reveal-section">
+    <h4>Evidence</h4>
+    <div class="wu-evidence-list">
+      <figure class="wu-evidence">
+        <img src="/assets/writeup/06-filter-chat-redacted.png" alt="Redacted view showing the AI assistant response and resulting filter page" loading="lazy">
+        <figcaption>Redacted evidence showing the AI assistant returning a summary while the mailbox rule interface reflects the created filter. The assistant name is intentionally hidden.</figcaption>
+      </figure>
+      <figure class="wu-evidence">
+        <img src="/assets/writeup/07-summary-result.png" alt="Close-up of the assistant response summarizing the story and confirming the filter setup" loading="lazy">
+        <figcaption>Close-up of the assistant response confirming the folder and filter creation.</figcaption>
+      </figure>
+      <figure class="wu-evidence">
+        <img src="/assets/writeup/08-filter-rule.png" alt="Filter configuration showing messages containing halo being moved to Trash" loading="lazy">
+        <figcaption>Resulting rule: attacker-influenced conditions route targeted incoming messages away from the inbox.</figcaption>
+      </figure>
+    </div>
+  </section>
+  <section class="wu-section-block reveal-section">
+    <h4>Impact</h4>
+    <p>This issue allows an attacker-controlled email to manipulate downstream assistant behavior and silently alter how future messages are handled. In this case, emails containing a chosen keyword can be routed away from the inbox, causing integrity and availability issues for mailbox content. It also demonstrates that guardrails around one mailbox action do not necessarily protect adjacent automation features.</p>
+  </section>
+</div>
+`
+
+        };
+
+        const modalOverlay = document.getElementById('wu-modal');
+        const closeModalBtn = document.getElementById('close-modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalBodyContent = document.getElementById('modal-body-content');
+        const modalTriggers = document.querySelectorAll('.modal-trigger');
+
+        let modalSectionObserver;
+        const bindModalReveal = () => {
+            const sections = modalBodyContent.querySelectorAll('.reveal-section');
+            if (!sections.length) return;
+            if (modalSectionObserver) modalSectionObserver.disconnect();
+            modalSectionObserver = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) entry.target.classList.add('in-view');
+                });
+            }, { root: modalBodyContent, threshold: 0.18 });
+            sections.forEach((section, index) => {
+                section.style.transitionDelay = `${Math.min(index * 70, 240)}ms`;
+                modalSectionObserver.observe(section);
+            });
+        };
+
+        let lastModalTrigger = null;
+
+        const closeModal = () => {
+            modalOverlay.classList.remove('active');
+            modalOverlay.inert = true;
+            document.querySelector('main').inert = false;
+            document.querySelector('nav').inert = false;
+            modalOverlay.setAttribute('aria-hidden', 'true');
+            body.classList.remove('modal-open');
+            if (modalSectionObserver) modalSectionObserver.disconnect();
+            if (lastModalTrigger) lastModalTrigger.focus({ preventScroll: true });
+        };
+
+        modalTriggers.forEach(trigger => {
+            trigger.addEventListener('click', function(e) {
+                e.preventDefault();
+                const articleId = this.getAttribute('data-id');
+                const articleTitle = this.getAttribute('data-title');
+                if (!wuArticles[articleId]) return;
+
+                lastModalTrigger = this;
+                modalTitle.textContent = articleTitle;
+                modalBodyContent.innerHTML = wuArticles[articleId];
+                modalBodyContent.scrollTop = 0;
+                modalOverlay.inert = false;
+                document.querySelector('main').inert = true;
+                document.querySelector('nav').inert = true;
+                modalOverlay.classList.add('active');
+                modalOverlay.setAttribute('aria-hidden', 'false');
+                body.classList.add('modal-open');
+                bindModalReveal();
+                requestAnimationFrame(() => closeModalBtn.focus({ preventScroll: true }));
+            });
+        });
+
+        closeModalBtn.addEventListener('click', closeModal);
+
+        modalOverlay.addEventListener('click', (e) => {
+            if (e.target === modalOverlay) closeModal();
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (!modalOverlay.classList.contains('active')) return;
+            if (e.key === 'Escape') closeModal();
+            if (e.key === 'Tab') {
+                const focusable = modalOverlay.querySelectorAll('a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])');
+                if (!focusable.length) return;
+                const first = focusable[0];
+                const last = focusable[focusable.length - 1];
+                if (e.shiftKey && document.activeElement === first) {
+                    e.preventDefault();
+                    last.focus();
+                } else if (!e.shiftKey && document.activeElement === last) {
+                    e.preventDefault();
+                    first.focus();
+                }
+            }
+        });
+
+        const counterNumbers = document.querySelectorAll('[data-counter]');
+        const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        const formatCounter = (value, format) => {
+            const rounded = Math.round(value);
+            if (format === 'id') return new Intl.NumberFormat('id-ID').format(rounded);
+            if (format === 'en') return new Intl.NumberFormat('en-US').format(rounded);
+            return String(rounded);
+        };
+
+        const runCounter = (el) => {
+            if (el.dataset.animated === 'true') return;
+            el.dataset.animated = 'true';
+            const target = Number(el.dataset.counter || 0);
+            const format = el.dataset.format || '';
+
+            if (reducedMotion) {
+                el.textContent = formatCounter(target, format);
+                return;
+            }
+
+            const duration = target >= 100000 ? 1150 : 850;
+            const startedAt = performance.now();
+            const easeOut = t => 1 - Math.pow(1 - t, 4);
+
+            const frame = (now) => {
+                const progress = Math.min((now - startedAt) / duration, 1);
+                el.textContent = formatCounter(target * easeOut(progress), format);
+                if (progress < 1) requestAnimationFrame(frame);
+            };
+            requestAnimationFrame(frame);
+        };
+
+        const metricsSection = document.querySelector('.metrics-grid');
+        if ('IntersectionObserver' in window && metricsSection) {
+            const counterObserver = new IntersectionObserver((entries, observer) => {
+                if (entries.some(entry => entry.isIntersecting)) {
+                    counterNumbers.forEach(runCounter);
+                    observer.disconnect();
+                }
+            }, { threshold: 0.35 });
+            counterObserver.observe(metricsSection);
+        } else {
+            counterNumbers.forEach(runCounter);
+        }
+
+        const revealItems = document.querySelectorAll('.metric-card, .program-strip-item, .stack-card, .log-item, .wu-card, .wu-empty');
+        revealItems.forEach((el, index) => {
+            el.classList.add('reveal');
+            el.style.setProperty('--reveal-delay', `${Math.min(index * 35, 180)}ms`);
+        });
+
+        if ('IntersectionObserver' in window) {
+            const revealObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.08, rootMargin: '0px 0px -20px 0px' });
+            revealItems.forEach(el => revealObserver.observe(el));
+        } else {
+            revealItems.forEach(el => el.classList.add('is-visible'));
+        }
+
+        const floatingNav = document.getElementById('floating-nav');
+        floatingNav.classList.add('is-visible');
+    </script>
+    <script src="/interactions.js" defer></script>
+</body>
+</html>
