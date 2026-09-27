@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://halwklys.netlify.app/sitemap.xml
+Sitemap: https://8xhalwkly.github.io/sitemap.xml
